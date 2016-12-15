@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD10C6571E02809000684E25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10C6561E02809000684E25 /* main.m */; };
+		BD10C65A1E02809000684E25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10C6591E02809000684E25 /* AppDelegate.m */; };
+		BD10C6621E02809000684E25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD10C6611E02809000684E25 /* Assets.xcassets */; };
+		BD10C6651E02809100684E25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD10C6631E02809100684E25 /* LaunchScreen.storyboard */; };
+		BD10C6701E02809100684E25 /* YZXPieGraphViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10C66F1E02809100684E25 /* YZXPieGraphViewTests.m */; };
+		BD10C67B1E02809100684E25 /* YZXPieGraphViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10C67A1E02809100684E25 /* YZXPieGraphViewUITests.m */; };
+		BD10C68A1E02813C00684E25 /* YZXPieGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10C6891E02813C00684E25 /* YZXPieGraphView.m */; };
+		BD10C68D1E0284A200684E25 /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10C68C1E0284A200684E25 /* ShowViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD10C66C1E02809100684E25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD10C64A1E02809000684E25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD10C6511E02809000684E25;
+			remoteInfo = YZXPieGraphView;
+		};
+		BD10C6771E02809100684E25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD10C64A1E02809000684E25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD10C6511E02809000684E25;
+			remoteInfo = YZXPieGraphView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BD10C6521E02809000684E25 /* YZXPieGraphView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YZXPieGraphView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD10C6561E02809000684E25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BD10C6581E02809000684E25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BD10C6591E02809000684E25 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BD10C6611E02809000684E25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BD10C6641E02809100684E25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BD10C6661E02809100684E25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD10C66B1E02809100684E25 /* YZXPieGraphViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YZXPieGraphViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD10C66F1E02809100684E25 /* YZXPieGraphViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZXPieGraphViewTests.m; sourceTree = "<group>"; };
+		BD10C6711E02809100684E25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD10C6761E02809100684E25 /* YZXPieGraphViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YZXPieGraphViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD10C67A1E02809100684E25 /* YZXPieGraphViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZXPieGraphViewUITests.m; sourceTree = "<group>"; };
+		BD10C67C1E02809100684E25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD10C6881E02813C00684E25 /* YZXPieGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZXPieGraphView.h; sourceTree = "<group>"; };
+		BD10C6891E02813C00684E25 /* YZXPieGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZXPieGraphView.m; sourceTree = "<group>"; };
+		BD10C68B1E0284A200684E25 /* ShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowViewController.h; sourceTree = "<group>"; };
+		BD10C68C1E0284A200684E25 /* ShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD10C64F1E02809000684E25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD10C6681E02809100684E25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD10C6731E02809100684E25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD10C6491E02809000684E25 = {
+			isa = PBXGroup;
+			children = (
+				BD10C6541E02809000684E25 /* YZXPieGraphView */,
+				BD10C66E1E02809100684E25 /* YZXPieGraphViewTests */,
+				BD10C6791E02809100684E25 /* YZXPieGraphViewUITests */,
+				BD10C6531E02809000684E25 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BD10C6531E02809000684E25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD10C6521E02809000684E25 /* YZXPieGraphView.app */,
+				BD10C66B1E02809100684E25 /* YZXPieGraphViewTests.xctest */,
+				BD10C6761E02809100684E25 /* YZXPieGraphViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD10C6541E02809000684E25 /* YZXPieGraphView */ = {
+			isa = PBXGroup;
+			children = (
+				BD10C6581E02809000684E25 /* AppDelegate.h */,
+				BD10C6591E02809000684E25 /* AppDelegate.m */,
+				BD10C68B1E0284A200684E25 /* ShowViewController.h */,
+				BD10C68C1E0284A200684E25 /* ShowViewController.m */,
+				BD10C6881E02813C00684E25 /* YZXPieGraphView.h */,
+				BD10C6891E02813C00684E25 /* YZXPieGraphView.m */,
+				BD10C6611E02809000684E25 /* Assets.xcassets */,
+				BD10C6631E02809100684E25 /* LaunchScreen.storyboard */,
+				BD10C6661E02809100684E25 /* Info.plist */,
+				BD10C6551E02809000684E25 /* Supporting Files */,
+			);
+			path = YZXPieGraphView;
+			sourceTree = "<group>";
+		};
+		BD10C6551E02809000684E25 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD10C6561E02809000684E25 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD10C66E1E02809100684E25 /* YZXPieGraphViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD10C66F1E02809100684E25 /* YZXPieGraphViewTests.m */,
+				BD10C6711E02809100684E25 /* Info.plist */,
+			);
+			path = YZXPieGraphViewTests;
+			sourceTree = "<group>";
+		};
+		BD10C6791E02809100684E25 /* YZXPieGraphViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BD10C67A1E02809100684E25 /* YZXPieGraphViewUITests.m */,
+				BD10C67C1E02809100684E25 /* Info.plist */,
+			);
+			path = YZXPieGraphViewUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD10C6511E02809000684E25 /* YZXPieGraphView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD10C67F1E02809100684E25 /* Build configuration list for PBXNativeTarget "YZXPieGraphView" */;
+			buildPhases = (
+				BD10C64E1E02809000684E25 /* Sources */,
+				BD10C64F1E02809000684E25 /* Frameworks */,
+				BD10C6501E02809000684E25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YZXPieGraphView;
+			productName = YZXPieGraphView;
+			productReference = BD10C6521E02809000684E25 /* YZXPieGraphView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BD10C66A1E02809100684E25 /* YZXPieGraphViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD10C6821E02809100684E25 /* Build configuration list for PBXNativeTarget "YZXPieGraphViewTests" */;
+			buildPhases = (
+				BD10C6671E02809100684E25 /* Sources */,
+				BD10C6681E02809100684E25 /* Frameworks */,
+				BD10C6691E02809100684E25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD10C66D1E02809100684E25 /* PBXTargetDependency */,
+			);
+			name = YZXPieGraphViewTests;
+			productName = YZXPieGraphViewTests;
+			productReference = BD10C66B1E02809100684E25 /* YZXPieGraphViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BD10C6751E02809100684E25 /* YZXPieGraphViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD10C6851E02809100684E25 /* Build configuration list for PBXNativeTarget "YZXPieGraphViewUITests" */;
+			buildPhases = (
+				BD10C6721E02809100684E25 /* Sources */,
+				BD10C6731E02809100684E25 /* Frameworks */,
+				BD10C6741E02809100684E25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD10C6781E02809100684E25 /* PBXTargetDependency */,
+			);
+			name = YZXPieGraphViewUITests;
+			productName = YZXPieGraphViewUITests;
+			productReference = BD10C6761E02809100684E25 /* YZXPieGraphViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD10C64A1E02809000684E25 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = yinixng;
+				TargetAttributes = {
+					BD10C6511E02809000684E25 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 67FSYNPTAV;
+						ProvisioningStyle = Automatic;
+					};
+					BD10C66A1E02809100684E25 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BD10C6511E02809000684E25;
+					};
+					BD10C6751E02809100684E25 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BD10C6511E02809000684E25;
+					};
+				};
+			};
+			buildConfigurationList = BD10C64D1E02809000684E25 /* Build configuration list for PBXProject "YZXPieGraphView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BD10C6491E02809000684E25;
+			productRefGroup = BD10C6531E02809000684E25 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD10C6511E02809000684E25 /* YZXPieGraphView */,
+				BD10C66A1E02809100684E25 /* YZXPieGraphViewTests */,
+				BD10C6751E02809100684E25 /* YZXPieGraphViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD10C6501E02809000684E25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD10C6651E02809100684E25 /* LaunchScreen.storyboard in Resources */,
+				BD10C6621E02809000684E25 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD10C6691E02809100684E25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD10C6741E02809100684E25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD10C64E1E02809000684E25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD10C68D1E0284A200684E25 /* ShowViewController.m in Sources */,
+				BD10C65A1E02809000684E25 /* AppDelegate.m in Sources */,
+				BD10C68A1E02813C00684E25 /* YZXPieGraphView.m in Sources */,
+				BD10C6571E02809000684E25 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD10C6671E02809100684E25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD10C6701E02809100684E25 /* YZXPieGraphViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD10C6721E02809100684E25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD10C67B1E02809100684E25 /* YZXPieGraphViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD10C66D1E02809100684E25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD10C6511E02809000684E25 /* YZXPieGraphView */;
+			targetProxy = BD10C66C1E02809100684E25 /* PBXContainerItemProxy */;
+		};
+		BD10C6781E02809100684E25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD10C6511E02809000684E25 /* YZXPieGraphView */;
+			targetProxy = BD10C6771E02809100684E25 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BD10C6631E02809100684E25 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD10C6641E02809100684E25 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD10C67D1E02809100684E25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BD10C67E1E02809100684E25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD10C6801E02809100684E25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 67FSYNPTAV;
+				INFOPLIST_FILE = YZXPieGraphView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yx.YZXPieGraphView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BD10C6811E02809100684E25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 67FSYNPTAV;
+				INFOPLIST_FILE = YZXPieGraphView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yx.YZXPieGraphView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BD10C6831E02809100684E25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YZXPieGraphViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yx.YZXPieGraphViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YZXPieGraphView.app/YZXPieGraphView";
+			};
+			name = Debug;
+		};
+		BD10C6841E02809100684E25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YZXPieGraphViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yx.YZXPieGraphViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YZXPieGraphView.app/YZXPieGraphView";
+			};
+			name = Release;
+		};
+		BD10C6861E02809100684E25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = YZXPieGraphViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yx.YZXPieGraphViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = YZXPieGraphView;
+			};
+			name = Debug;
+		};
+		BD10C6871E02809100684E25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = YZXPieGraphViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yx.YZXPieGraphViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = YZXPieGraphView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD10C64D1E02809000684E25 /* Build configuration list for PBXProject "YZXPieGraphView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD10C67D1E02809100684E25 /* Debug */,
+				BD10C67E1E02809100684E25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD10C67F1E02809100684E25 /* Build configuration list for PBXNativeTarget "YZXPieGraphView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD10C6801E02809100684E25 /* Debug */,
+				BD10C6811E02809100684E25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BD10C6821E02809100684E25 /* Build configuration list for PBXNativeTarget "YZXPieGraphViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD10C6831E02809100684E25 /* Debug */,
+				BD10C6841E02809100684E25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BD10C6851E02809100684E25 /* Build configuration list for PBXNativeTarget "YZXPieGraphViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD10C6861E02809100684E25 /* Debug */,
+				BD10C6871E02809100684E25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BD10C64A1E02809000684E25 /* Project object */;
+}
