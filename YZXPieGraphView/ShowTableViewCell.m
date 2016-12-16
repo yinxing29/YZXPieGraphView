@@ -34,10 +34,12 @@
 - (IBAction)buttonPressed:(UIButton *)sender {
     UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"颜色" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     for (NSString *key in [ColorDic allKeys]) {
-        [alertC addAction:[UIAlertAction actionWithTitle:key style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            [sender setTitle:key forState:UIControlStateNormal];
-            self.contextBlock(key,@"color");
-        }]];
+        if (![key isEqualToString:@"随机"]) {
+            [alertC addAction:[UIAlertAction actionWithTitle:key style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [sender setTitle:key forState:UIControlStateNormal];
+                self.contextBlock(key,@"color");
+            }]];
+        }
     }
     [alertC addAction:[UIAlertAction actionWithTitle:@"随机" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
         [sender setTitle:@"随机" forState:UIControlStateNormal];
