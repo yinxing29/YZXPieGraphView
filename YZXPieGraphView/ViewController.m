@@ -10,6 +10,8 @@
 #import "ShowTableViewCell.h"
 #import "ShowViewController.h"
 #import "Header.h"
+#import "DataModel.h"
+#import "MJExtension.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -30,6 +32,8 @@
  */
 @property (nonatomic, strong) NSMutableDictionary            *colorsArr;
 
+@property (nonatomic, strong) NSMutableArray <DataModel *>   *modelArr;
+
 @property (nonatomic, assign) NSInteger                      cellNumber;
 
 @end
@@ -45,7 +49,17 @@
 
 - (void)initializeUserInterface
 {
-    self.cellNumber = self.precentageArr.count;
+    NSMutableArray *modelArr = [NSMutableArray array];
+    for (NSNumber *key in [self.precentageArr allKeys]) {
+        NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+        [dic setObject:self.titleArr[key] forKey:@"title"];
+        [dic setObject:self.colorsArr[key] forKey:@"color"];
+        [dic setObject:self.precentageArr[key] forKey:@"percentage"];
+        [modelArr addObject:dic];
+    }
+    
+    self.modelArr = [DataModel mj_objectArrayWithKeyValuesArray:modelArr];
+    
     [self.view addSubview:self.tableView];
 }
 
@@ -68,7 +82,8 @@
 
 - (void)leftItemPressed
 {
-    self.cellNumber ++;
+    DataModel *model = [[DataModel alloc] init];
+    [self.modelArr addObject:model];
     [self.tableView reloadData];
 }
 
@@ -79,21 +94,21 @@
     ShowViewController *showVC = [[ShowViewController alloc] init];
     
     NSMutableArray *titles = [NSMutableArray array];
-    for (NSNumber *key in [self.titleArr allKeys]) {
-        [titles addObject:self.titleArr[key]];
+    NSMutableArray *precentages = [NSMutableArray array];
+    NSMutableArray *colors = [NSMutableArray array];
+    for (DataModel *model in self.modelArr) {
+        if (![model.title isEqualToString:@""] && model.title) {
+            [titles addObject:model.title];
+        }
+        if (![model.percentage isEqualToString:@""] && model.percentage) {
+            [precentages addObject:model.percentage];
+        }
+        if (![model.color isEqualToString:@""] && model.color) {
+            [colors addObject:ColorDic[model.color]];
+        }
     }
     showVC.titleArr = titles.count == 0?nil:titles;
-    
-    NSMutableArray *precentages = [NSMutableArray array];
-    for (NSNumber *key in [self.precentageArr allKeys]) {
-        [precentages addObject:self.precentageArr[key]];
-    }
     showVC.precentageArr = precentages.count == 0?nil:precentages;
-    
-    NSMutableArray *colors = [NSMutableArray array];
-    for (NSNumber *key in [self.colorsArr allKeys]) {
-        [colors addObject:ColorDic[self.colorsArr[key]]];
-    }
     showVC.colorsArr = colors.count == 0?nil:colors;
     [self.navigationController pushViewController:showVC animated:YES];
 }
@@ -106,7 +121,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.cellNumber;
+    return self.modelArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -118,23 +133,19 @@
     }
     cell.percentage.tag = 100 + indexPath.row;
     cell.titleLable.tag = 500 + indexPath.row;
-    cell.percentage.text = self.precentageArr[@(indexPath.row)];
-    cell.titleLable.text = self.titleArr[@(indexPath.row)];
-    [cell.colorBut setTitle:self.colorsArr[@(indexPath.row)]?self.colorsArr[@(indexPath.row)]:@"选择" forState:UIControlStateNormal];
+    cell.percentage.text = self.modelArr[indexPath.row].percentage;
+    cell.titleLable.text = self.modelArr[indexPath.row].title;
+    [cell.colorBut setTitle:self.modelArr[indexPath.row].color?self.modelArr[indexPath.row].color:@"选择" forState:UIControlStateNormal];
     
     
     __weak typeof(self) weak_self = self;
     [cell setContextBlock:^(NSString *content, NSString *type) {
         if ([type isEqualToString:@"color"]) {
-            if ([content isEqualToString:@"随机"]) {
-                [weak_self.colorsArr setObject:content forKey:@(indexPath.row)];
-            }else {
-                [weak_self.colorsArr setObject:content forKey:@(indexPath.row)];
-            }
+            weak_self.modelArr[indexPath.row].color = content;
         }else if ([type isEqualToString:@"per"]) {
-            [weak_self.precentageArr setObject:content forKey:@(indexPath.row)];
+            weak_self.modelArr[indexPath.row].percentage = content;
         }else if ([type isEqualToString:@"title"]) {
-            [weak_self.titleArr setObject:content forKey:@(indexPath.row)];
+            weak_self.modelArr[indexPath.row].title = content;
         }
     }];
     cell.selectionStyle = NO;
@@ -159,10 +170,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        self.cellNumber --;
-        [self.titleArr removeObjectForKey:@(indexPath.row)];
-        [self.precentageArr removeObjectForKey:@(indexPath.row)];
-        [self.colorsArr removeObjectForKey:@(indexPath.row)];
+        [self.modelArr removeObjectAtIndex:indexPath.row];
         // Delete the row from the data source.
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
@@ -207,6 +215,14 @@
         _titleArr = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"title1",@0,@"title2",@1,@"title3",@2,@"title4",@3,@"title5",@4, nil];
     }
     return _titleArr;
+}
+
+- (NSMutableArray<DataModel *> *)modelArr
+{
+    if (!_modelArr) {
+        _modelArr = [[NSMutableArray alloc] init];
+    }
+    return _modelArr;
 }
 
 @end

@@ -33,6 +33,17 @@
 		BD581A081E03844100B91776 /* IQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5819F71E03844100B91776 /* IQToolbar.m */; };
 		BD581A091E03844100B91776 /* IQUIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5819F91E03844100B91776 /* IQUIView+IQKeyboardToolbar.m */; };
 		BD581A0A1E03844100B91776 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD5819FB1E03844100B91776 /* IQKeyboardManager.bundle */; };
+		BD581A0E1E03C1BC00B91776 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD581A0D1E03C1BC00B91776 /* DataModel.m */; };
+		BD581A251E03C27600B91776 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BD581A121E03C27600B91776 /* MJExtensionConst.m */; };
+		BD581A261E03C27600B91776 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD581A141E03C27600B91776 /* MJFoundation.m */; };
+		BD581A271E03C27600B91776 /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = BD581A161E03C27600B91776 /* MJProperty.m */; };
+		BD581A281E03C27600B91776 /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = BD581A181E03C27600B91776 /* MJPropertyKey.m */; };
+		BD581A291E03C27600B91776 /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = BD581A1A1E03C27600B91776 /* MJPropertyType.m */; };
+		BD581A2A1E03C27600B91776 /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BD581A1C1E03C27600B91776 /* NSObject+MJClass.m */; };
+		BD581A2B1E03C27600B91776 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = BD581A1E1E03C27600B91776 /* NSObject+MJCoding.m */; };
+		BD581A2C1E03C27600B91776 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BD581A201E03C27600B91776 /* NSObject+MJKeyValue.m */; };
+		BD581A2D1E03C27600B91776 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = BD581A221E03C27600B91776 /* NSObject+MJProperty.m */; };
+		BD581A2E1E03C27600B91776 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BD581A241E03C27600B91776 /* NSString+MJExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +118,29 @@
 		BD5819F91E03844100B91776 /* IQUIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
 		BD5819FB1E03844100B91776 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
 		BD581A0B1E03891A00B91776 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		BD581A0C1E03C1BC00B91776 /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
+		BD581A0D1E03C1BC00B91776 /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
+		BD581A101E03C27600B91776 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		BD581A111E03C27600B91776 /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
+		BD581A121E03C27600B91776 /* MJExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConst.m; sourceTree = "<group>"; };
+		BD581A131E03C27600B91776 /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
+		BD581A141E03C27600B91776 /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		BD581A151E03C27600B91776 /* MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJProperty.h; sourceTree = "<group>"; };
+		BD581A161E03C27600B91776 /* MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJProperty.m; sourceTree = "<group>"; };
+		BD581A171E03C27600B91776 /* MJPropertyKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyKey.h; sourceTree = "<group>"; };
+		BD581A181E03C27600B91776 /* MJPropertyKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyKey.m; sourceTree = "<group>"; };
+		BD581A191E03C27600B91776 /* MJPropertyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyType.h; sourceTree = "<group>"; };
+		BD581A1A1E03C27600B91776 /* MJPropertyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyType.m; sourceTree = "<group>"; };
+		BD581A1B1E03C27600B91776 /* NSObject+MJClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJClass.h"; sourceTree = "<group>"; };
+		BD581A1C1E03C27600B91776 /* NSObject+MJClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJClass.m"; sourceTree = "<group>"; };
+		BD581A1D1E03C27600B91776 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		BD581A1E1E03C27600B91776 /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		BD581A1F1E03C27600B91776 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		BD581A201E03C27600B91776 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		BD581A211E03C27600B91776 /* NSObject+MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		BD581A221E03C27600B91776 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		BD581A231E03C27600B91776 /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
+		BD581A241E03C27600B91776 /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				BD581A0B1E03891A00B91776 /* Header.h */,
+				BD581A0F1E03C27500B91776 /* MJExtension */,
 				BD5819D71E03844100B91776 /* IQKeyboardManager */,
 				BD10C6581E02809000684E25 /* AppDelegate.h */,
 				BD10C6591E02809000684E25 /* AppDelegate.m */,
@@ -169,6 +204,8 @@
 				BD10C6891E02813C00684E25 /* YZXPieGraphView.m */,
 				BD5817D61E037FF400B91776 /* ShowTableViewCell.h */,
 				BD5817D71E037FF400B91776 /* ShowTableViewCell.m */,
+				BD581A0C1E03C1BC00B91776 /* DataModel.h */,
+				BD581A0D1E03C1BC00B91776 /* DataModel.m */,
 				BD5817D91E037FFC00B91776 /* ShowTableViewCell.xib */,
 				BD10C6611E02809000684E25 /* Assets.xcassets */,
 				BD10C6631E02809100684E25 /* LaunchScreen.storyboard */,
@@ -280,6 +317,34 @@
 				BD5819FB1E03844100B91776 /* IQKeyboardManager.bundle */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		BD581A0F1E03C27500B91776 /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				BD581A101E03C27600B91776 /* MJExtension.h */,
+				BD581A111E03C27600B91776 /* MJExtensionConst.h */,
+				BD581A121E03C27600B91776 /* MJExtensionConst.m */,
+				BD581A131E03C27600B91776 /* MJFoundation.h */,
+				BD581A141E03C27600B91776 /* MJFoundation.m */,
+				BD581A151E03C27600B91776 /* MJProperty.h */,
+				BD581A161E03C27600B91776 /* MJProperty.m */,
+				BD581A171E03C27600B91776 /* MJPropertyKey.h */,
+				BD581A181E03C27600B91776 /* MJPropertyKey.m */,
+				BD581A191E03C27600B91776 /* MJPropertyType.h */,
+				BD581A1A1E03C27600B91776 /* MJPropertyType.m */,
+				BD581A1B1E03C27600B91776 /* NSObject+MJClass.h */,
+				BD581A1C1E03C27600B91776 /* NSObject+MJClass.m */,
+				BD581A1D1E03C27600B91776 /* NSObject+MJCoding.h */,
+				BD581A1E1E03C27600B91776 /* NSObject+MJCoding.m */,
+				BD581A1F1E03C27600B91776 /* NSObject+MJKeyValue.h */,
+				BD581A201E03C27600B91776 /* NSObject+MJKeyValue.m */,
+				BD581A211E03C27600B91776 /* NSObject+MJProperty.h */,
+				BD581A221E03C27600B91776 /* NSObject+MJProperty.m */,
+				BD581A231E03C27600B91776 /* NSString+MJExtension.h */,
+				BD581A241E03C27600B91776 /* NSString+MJExtension.m */,
+			);
+			path = MJExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,24 +483,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD581A2B1E03C27600B91776 /* NSObject+MJCoding.m in Sources */,
+				BD581A2A1E03C27600B91776 /* NSObject+MJClass.m in Sources */,
+				BD581A251E03C27600B91776 /* MJExtensionConst.m in Sources */,
 				BD10C68D1E0284A200684E25 /* ShowViewController.m in Sources */,
 				BD581A031E03844100B91776 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				BD5819FD1E03844100B91776 /* IQUIScrollView+Additions.m in Sources */,
 				BD581A001E03844100B91776 /* IQUIViewController+Additions.m in Sources */,
+				BD581A2D1E03C27600B91776 /* NSObject+MJProperty.m in Sources */,
 				BD581A011E03844100B91776 /* IQUIWindow+Hierarchy.m in Sources */,
 				BD10C65A1E02809000684E25 /* AppDelegate.m in Sources */,
 				BD581A051E03844100B91776 /* IQBarButtonItem.m in Sources */,
 				BD10C68A1E02813C00684E25 /* YZXPieGraphView.m in Sources */,
+				BD581A2E1E03C27600B91776 /* NSString+MJExtension.m in Sources */,
+				BD581A261E03C27600B91776 /* MJFoundation.m in Sources */,
 				BD5819FF1E03844100B91776 /* IQUIView+Hierarchy.m in Sources */,
 				BD5819FC1E03844100B91776 /* IQNSArray+Sort.m in Sources */,
 				BD10C6571E02809000684E25 /* main.m in Sources */,
+				BD581A291E03C27600B91776 /* MJPropertyType.m in Sources */,
+				BD581A0E1E03C1BC00B91776 /* DataModel.m in Sources */,
 				BD581A091E03844100B91776 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				BD5819FE1E03844100B91776 /* IQUITextFieldView+Additions.m in Sources */,
 				BD581A021E03844100B91776 /* IQKeyboardManager.m in Sources */,
 				BD581A081E03844100B91776 /* IQToolbar.m in Sources */,
 				BD581A071E03844100B91776 /* IQTitleBarButtonItem.m in Sources */,
+				BD581A271E03C27600B91776 /* MJProperty.m in Sources */,
 				BD5817D81E037FF400B91776 /* ShowTableViewCell.m in Sources */,
 				BD581A041E03844100B91776 /* IQTextView.m in Sources */,
+				BD581A2C1E03C27600B91776 /* NSObject+MJKeyValue.m in Sources */,
+				BD581A281E03C27600B91776 /* MJPropertyKey.m in Sources */,
 				BD5817D51E037F2E00B91776 /* ViewController.m in Sources */,
 				BD581A061E03844100B91776 /* IQPreviousNextView.m in Sources */,
 			);
