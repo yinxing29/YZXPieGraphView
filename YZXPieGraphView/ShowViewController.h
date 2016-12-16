@@ -10,4 +10,19 @@
 
 @interface ShowViewController : UIViewController
 
+/**
+ 标题
+ */
+@property (nonatomic, strong) NSArray                    *titleArr;
+
+/**
+ 百分比
+ */
+@property (nonatomic, strong) NSArray                    *precentageArr;
+
+/**
+ 设置的颜色
+ */
+@property (nonatomic, strong) NSArray <UIColor *>        *colorsArr;
+
 @end

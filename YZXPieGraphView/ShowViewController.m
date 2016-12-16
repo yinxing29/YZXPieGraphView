@@ -20,15 +20,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"扇形图";
+    self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.piegraphView];
 }
 
 - (YZXPieGraphView *)piegraphView
 {
     if (!_pieGraphView) {
-        _pieGraphView = [[YZXPieGraphView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200) withTitleData:@[@"title1",@"title2",@"title3",@"title4",@"title5"]
-                                         withPercentageData:@[@"30",@"35",@"5",@"20",@"10"]
-                                                 withColors:@[[UIColor redColor],[UIColor yellowColor],[UIColor blueColor],[UIColor grayColor],[UIColor orangeColor]]];
+        _pieGraphView = [[YZXPieGraphView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200) withTitleData:self.titleArr
+                                         withPercentageData:self.precentageArr
+                                                 withColors:self.colorsArr];
         _pieGraphView.center = self.view.center;
         _pieGraphView.backgroundColor = [UIColor greenColor];
         //        _piegraphView.titleFont = 15.0;

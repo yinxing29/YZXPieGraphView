@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ShowViewController.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    ShowViewController *VC = [[ShowViewController alloc] init];
+    ViewController *VC = [[ViewController alloc] init];
     UINavigationController *navigationC = [[UINavigationController alloc] initWithRootViewController:VC];
     self.window.rootViewController = navigationC;
     [self.window makeKeyAndVisible];
