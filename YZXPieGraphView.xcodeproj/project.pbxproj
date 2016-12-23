@@ -13,8 +13,8 @@
 		BD10C6651E02809100684E25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD10C6631E02809100684E25 /* LaunchScreen.storyboard */; };
 		BD10C6701E02809100684E25 /* YZXPieGraphViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10C66F1E02809100684E25 /* YZXPieGraphViewTests.m */; };
 		BD10C67B1E02809100684E25 /* YZXPieGraphViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10C67A1E02809100684E25 /* YZXPieGraphViewUITests.m */; };
-		BD10C68A1E02813C00684E25 /* YZXPieGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10C6891E02813C00684E25 /* YZXPieGraphView.m */; };
 		BD10C68D1E0284A200684E25 /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10C68C1E0284A200684E25 /* ShowViewController.m */; };
+		BD2859C11E0CFDC2002169E0 /* YZXPieGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2859C01E0CFDC2002169E0 /* YZXPieGraphView.m */; };
 		BD5817D51E037F2E00B91776 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5817D41E037F2E00B91776 /* ViewController.m */; };
 		BD5817D81E037FF400B91776 /* ShowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5817D71E037FF400B91776 /* ShowTableViewCell.m */; };
 		BD5817DA1E037FFC00B91776 /* ShowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5817D91E037FFC00B91776 /* ShowTableViewCell.xib */; };
@@ -77,10 +77,10 @@
 		BD10C6761E02809100684E25 /* YZXPieGraphViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YZXPieGraphViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD10C67A1E02809100684E25 /* YZXPieGraphViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZXPieGraphViewUITests.m; sourceTree = "<group>"; };
 		BD10C67C1E02809100684E25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD10C6881E02813C00684E25 /* YZXPieGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZXPieGraphView.h; sourceTree = "<group>"; };
-		BD10C6891E02813C00684E25 /* YZXPieGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZXPieGraphView.m; sourceTree = "<group>"; };
 		BD10C68B1E0284A200684E25 /* ShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowViewController.h; sourceTree = "<group>"; };
 		BD10C68C1E0284A200684E25 /* ShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
+		BD2859BF1E0CFDC2002169E0 /* YZXPieGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZXPieGraphView.h; sourceTree = "<group>"; };
+		BD2859C01E0CFDC2002169E0 /* YZXPieGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZXPieGraphView.m; sourceTree = "<group>"; };
 		BD5817D31E037F2E00B91776 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BD5817D41E037F2E00B91776 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BD5817D61E037FF400B91776 /* ShowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowTableViewCell.h; sourceTree = "<group>"; };
@@ -200,12 +200,11 @@
 				BD5817D41E037F2E00B91776 /* ViewController.m */,
 				BD10C68B1E0284A200684E25 /* ShowViewController.h */,
 				BD10C68C1E0284A200684E25 /* ShowViewController.m */,
-				BD10C6881E02813C00684E25 /* YZXPieGraphView.h */,
-				BD10C6891E02813C00684E25 /* YZXPieGraphView.m */,
 				BD5817D61E037FF400B91776 /* ShowTableViewCell.h */,
 				BD5817D71E037FF400B91776 /* ShowTableViewCell.m */,
 				BD581A0C1E03C1BC00B91776 /* DataModel.h */,
 				BD581A0D1E03C1BC00B91776 /* DataModel.m */,
+				BD2859BE1E0CFDC2002169E0 /* YZXPieGraphView */,
 				BD5817D91E037FFC00B91776 /* ShowTableViewCell.xib */,
 				BD10C6611E02809000684E25 /* Assets.xcassets */,
 				BD10C6631E02809100684E25 /* LaunchScreen.storyboard */,
@@ -239,6 +238,15 @@
 				BD10C67C1E02809100684E25 /* Info.plist */,
 			);
 			path = YZXPieGraphViewUITests;
+			sourceTree = "<group>";
+		};
+		BD2859BE1E0CFDC2002169E0 /* YZXPieGraphView */ = {
+			isa = PBXGroup;
+			children = (
+				BD2859BF1E0CFDC2002169E0 /* YZXPieGraphView.h */,
+				BD2859C01E0CFDC2002169E0 /* YZXPieGraphView.m */,
+			);
+			path = YZXPieGraphView;
 			sourceTree = "<group>";
 		};
 		BD5819D71E03844100B91776 /* IQKeyboardManager */ = {
@@ -485,6 +493,7 @@
 			files = (
 				BD581A2B1E03C27600B91776 /* NSObject+MJCoding.m in Sources */,
 				BD581A2A1E03C27600B91776 /* NSObject+MJClass.m in Sources */,
+				BD2859C11E0CFDC2002169E0 /* YZXPieGraphView.m in Sources */,
 				BD581A251E03C27600B91776 /* MJExtensionConst.m in Sources */,
 				BD10C68D1E0284A200684E25 /* ShowViewController.m in Sources */,
 				BD581A031E03844100B91776 /* IQKeyboardReturnKeyHandler.m in Sources */,
@@ -494,7 +503,6 @@
 				BD581A011E03844100B91776 /* IQUIWindow+Hierarchy.m in Sources */,
 				BD10C65A1E02809000684E25 /* AppDelegate.m in Sources */,
 				BD581A051E03844100B91776 /* IQBarButtonItem.m in Sources */,
-				BD10C68A1E02813C00684E25 /* YZXPieGraphView.m in Sources */,
 				BD581A2E1E03C27600B91776 /* NSString+MJExtension.m in Sources */,
 				BD581A261E03C27600B91776 /* MJFoundation.m in Sources */,
 				BD5819FF1E03844100B91776 /* IQUIView+Hierarchy.m in Sources */,
