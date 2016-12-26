@@ -181,6 +181,9 @@
             }
         }];
     }
+    
+    //裁剪超出视图部分
+    self.layer.masksToBounds = YES;
 }
 
 #pragma mark - setter
