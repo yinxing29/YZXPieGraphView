@@ -13,9 +13,10 @@
 #import "DataModel.h"
 #import "MJExtension.h"
 
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 
-@property (nonatomic, strong) UITableView                    *tableView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewConstraint;
 
 /**
  标题
@@ -34,7 +35,14 @@
 
 @property (nonatomic, strong) NSMutableArray <DataModel *>   *modelArr;
 
-@property (nonatomic, assign) NSInteger                      cellNumber;
+@property (strong, nonatomic) UIColor *titleColor;
+
+@property (weak, nonatomic) IBOutlet UISwitch *hideTitle;
+@property (weak, nonatomic) IBOutlet UISwitch *hideAnnotation;
+@property (weak, nonatomic) IBOutlet UITextField *center_x;
+@property (weak, nonatomic) IBOutlet UITextField *center_y;
+@property (weak, nonatomic) IBOutlet UITextField *redius;
+@property (weak, nonatomic) IBOutlet UITextField *titleFont;
 
 @end
 
@@ -49,6 +57,11 @@
 
 - (void)initializeUserInterface
 {
+    self.center_x.text = [NSString stringWithFormat:@"%.2f",self.view.bounds.size.width / 2.0];
+    self.center_y.text = @"100";
+    self.titleFont.text = @"10.0";
+    self.redius.text = @"60.0";
+    
     NSMutableArray *modelArr = [NSMutableArray array];
     for (NSNumber *key in [self.precentageArr allKeys]) {
         NSMutableDictionary *dic = [NSMutableDictionary dictionary];
@@ -60,7 +73,7 @@
     
     self.modelArr = [DataModel mj_objectArrayWithKeyValuesArray:modelArr];
     
-    [self.view addSubview:self.tableView];
+    [self.tableView reloadData];
 }
 
 - (void)customNavigationBarItem
@@ -110,7 +123,46 @@
     showVC.titleArr = titles.count == 0?nil:titles;
     showVC.precentageArr = precentages.count == 0?nil:precentages;
     showVC.colorsArr = colors.count == 0?nil:colors;
+    showVC.hideTitlt = self.hideTitle.on;
+    showVC.hideAnnotation = self.hideAnnotation.on;
+    showVC.titleColor = self.titleColor;
+    showVC.circleCenter = CGPointMake([self.center_x.text floatValue], [self.center_y.text floatValue]);
+    showVC.circleRadius = [self.redius.text floatValue];
+    showVC.titleFont = [self.titleFont.text floatValue];
     [self.navigationController pushViewController:showVC animated:YES];
+}
+
+- (IBAction)buttonPressed:(UIButton *)sender {
+    UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"颜色" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    __weak typeof(self) weak_self = self;
+    for (NSString *key in [ColorDic allKeys]) {
+        if (![key isEqualToString:@"随机"]) {
+            [alertC addAction:[UIAlertAction actionWithTitle:key style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [sender setTitle:key forState:UIControlStateNormal];
+                weak_self.titleColor = ColorDic[key];
+            }]];
+        }
+    }
+    [alertC addAction:[UIAlertAction actionWithTitle:@"随机" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [sender setTitle:@"随机" forState:UIControlStateNormal];
+        weak_self.titleColor = ColorDic[@"随机"];
+    }]];
+    [alertC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:alertC animated:YES completion:nil];
+}
+
+- (IBAction)switchPressed:(UISwitch *)sender {
+    
+}
+
+#pragma mark - <UITextFieldDelegate>
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if ([textField.text isEqualToString:@""]) {
+        UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"请输入有效值！" preferredStyle:UIAlertControllerStyleAlert];
+        [alertC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
+        [self presentViewController:alertC animated:YES completion:nil];
+    }
 }
 
 #pragma mark - <UITableViewDelegate/UITableViewDataSource>
@@ -148,6 +200,7 @@
             weak_self.modelArr[indexPath.row].title = content;
         }
     }];
+    self.tableViewConstraint.constant = self.tableView.contentSize.height;
     cell.selectionStyle = NO;
     return cell;
 }
@@ -182,17 +235,6 @@
 }
 
 #pragma mark - 初始化
-- (UITableView *)tableView
-{
-    if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
-        _tableView.dataSource = self;
-        _tableView.delegate = self;
-        _tableView.tableFooterView = [[UIView alloc] init];
-    }
-    return _tableView;
-}
-
 - (NSMutableDictionary *)colorsArr
 {
     if (!_colorsArr) {

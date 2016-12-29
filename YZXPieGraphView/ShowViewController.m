@@ -27,17 +27,18 @@
 - (YZXPieGraphView *)piegraphView
 {
     if (!_pieGraphView) {
-        _pieGraphView = [[YZXPieGraphView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200) withTitleData:self.titleArr
-                                         withPercentageData:self.precentageArr
-                                                 withColors:self.colorsArr];
+        _pieGraphView = [[YZXPieGraphView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200)
+                                                 withTitleData:self.titleArr
+                                            withPercentageData:self.precentageArr
+                                                    withColors:self.colorsArr];
         _pieGraphView.center = self.view.center;
         _pieGraphView.backgroundColor = [UIColor greenColor];
-        //        _piegraphView.titleFont = 15.0;
-        //        _piegraphView.circleRadius = 30.0;
-        //        _piegraphView.titleColor = [UIColor blackColor];
-        //        _piegraphView.hideTitlt = YES;
-        //        _piegraphView.hideAnnotation = YES;
-        //        _piegraphView.circleCenter = CGPointMake(CGRectGetMidX(_piegraphView.bounds) + 50, CGRectGetMidY(_piegraphView.bounds));
+        _pieGraphView.titleFont = self.titleFont;
+        _pieGraphView.circleRadius = self.circleRadius;
+        _pieGraphView.titleColor = self.titleColor;
+        _pieGraphView.hideTitlt = self.hideTitlt;
+        _pieGraphView.hideAnnotation = self.hideAnnotation;
+        _pieGraphView.circleCenter = self.circleCenter;
     }
     return _pieGraphView;
 }

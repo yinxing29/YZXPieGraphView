@@ -90,11 +90,22 @@
         UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"请传入比例!" preferredStyle:UIAlertControllerStyleAlert];
         [alertC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
         [[[UIApplication sharedApplication].delegate window].rootViewController presentViewController:alertC animated:YES completion:nil];
-    }else if ((self.precentageArr.count != self.titleArr.count && self.titleArr) || (self.precentageArr.count != self.colorsArr.count && self.colorsArr) || (self.titleArr.count != self.colorsArr.count && self.colorsArr && self.titleArr)) {
+    }else if ((self.precentageArr.count != self.titleArr.count && self.titleArr)) {
         UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"初始化时传入的数组元素数量不一致!" preferredStyle:UIAlertControllerStyleAlert];
         [alertC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
         [[[UIApplication sharedApplication].delegate window].rootViewController presentViewController:alertC animated:YES completion:nil];
     }else {
+        if (self.colorsArr.count < self.titleArr.count) {
+            NSMutableArray *colors = [NSMutableArray array];
+            [colors addObjectsFromArray:self.colorsArr];
+            for (int i = 0; i<self.titleArr.count; i++) {
+                [colors addObject:[UIColor colorWithRed:(arc4random() % 256) / 255.0 green:(arc4random() % 256) / 255.0 blue:(arc4random() % 256) / 255.0 alpha:1]];
+                if (colors.count == self.titleArr.count) {
+                    self.colorsArr = colors;
+                    break;
+                }
+            }
+        }
         CGContextRef context = UIGraphicsGetCurrentContext();
         
         __block CGFloat startAngle;
@@ -102,6 +113,11 @@
         __weak typeof(self) weak_self = self;
         __block CGFloat circle_x = self.circleCenter.x != 0?self.circleCenter.x:self_center_x;
         __block CGFloat circle_y = self.circleCenter.y != 0?self.circleCenter.y:self_center_y;
+        
+        __block UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, (circle_x - self.radius) / 3.0 * 2, self_height)];
+        if (!self.hideAnnotation) {
+            [self addSubview:scrollView];
+        }
         
         [self.precentageArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             CGFloat addAngle = (2 * M_PI) * ([weak_self.precentageArr[idx] floatValue] / 100.0);
@@ -145,12 +161,17 @@
                 
                 if (!weak_self.hideTitlt) {
                     //获取某部分中间的一点(起始点)
-                    CGFloat start_x = (weak_self.radius - 10.0) * cos(angle) + circle_x;
-                    CGFloat start_y = (weak_self.radius - 10.0) * sin(angle) + circle_y;
+                    CGFloat start_x = (weak_self.radius - 5.0) * cos(angle) + circle_x;
+                    CGFloat start_y = (weak_self.radius - 5.0) * sin(angle) + circle_y;
+                    
+                    CGFloat lineLength = weak_self.radius / 3.0;
+                    if (weak_self.precentageArr.count >= 10) {
+                        lineLength = idx % 2 == 0?weak_self.radius / 3.0:weak_self.radius / 3.0 + 5;
+                    }
                     
                     //获取圆形外部一点(结束点)
-                    CGFloat end_x = (weak_self.radius + 10.0) * cos(angle) + circle_x;
-                    CGFloat end_y = (weak_self.radius + 10.0) * sin(angle) + circle_y;
+                    CGFloat end_x = (weak_self.radius + lineLength) * cos(angle) + circle_x;
+                    CGFloat end_y = (weak_self.radius + lineLength) * sin(angle) + circle_y;
                     //画线
                     CGContextSetStrokeColorWithColor(context, titleColor.CGColor);
                     CGContextMoveToPoint(context, start_x, start_y);
@@ -172,11 +193,23 @@
                 
                 if (!weak_self.hideAnnotation) {
                     //添加注释
-                    CGContextSetFillColorWithColor(context, weak_self.colorsArr[idx].CGColor);
-                    CGContextAddRect(context, CGRectMake(5, 5 + (idx * (5 + titleSize.height)), titleSize.height, titleSize.height));
-                    CGContextDrawPath(context, kCGPathFill);
+                    scrollView.contentSize = CGSizeMake(0, (titleSize.height + 5) * weak_self.precentageArr.count + 5);
                     
-                    [title drawInRect:CGRectMake(10 + titleSize.height, 5 + (idx * (5 + titleSize.height)), titleSize.width, titleSize.height) withAttributes:@{NSFontAttributeName:font,NSForegroundColorAttributeName:titleColor}];
+                    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(5, 5 + (idx * (5 + titleSize.height)), titleSize.height, titleSize.height)];
+                    view.backgroundColor = weak_self.colorsArr[idx];
+                    [scrollView addSubview:view];
+                    
+                    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10 + titleSize.height, 5 + (idx * (5 + titleSize.height)), titleSize.width, titleSize.height)];
+                    label.font = font;
+                    label.textColor = titleColor;
+                    label.text = title;
+                    [scrollView addSubview:label];
+                    
+//                    CGContextSetFillColorWithColor(context, weak_self.colorsArr[idx].CGColor);
+//                    CGContextAddRect(context, CGRectMake(5, 5 + (idx * (5 + titleSize.height)), titleSize.height, titleSize.height));
+//                    CGContextDrawPath(context, kCGPathFill);
+//                    
+//                    [title drawInRect:CGRectMake(10 + titleSize.height, 5 + (idx * (5 + titleSize.height)), titleSize.width, titleSize.height) withAttributes:@{NSFontAttributeName:font,NSForegroundColorAttributeName:titleColor}];
                 }
             }
         }];
@@ -254,6 +287,5 @@
     }
     return _colorsArr;
 }
-
 
 @end

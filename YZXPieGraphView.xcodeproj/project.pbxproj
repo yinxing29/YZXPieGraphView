@@ -44,6 +44,7 @@
 		BD581A2C1E03C27600B91776 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BD581A201E03C27600B91776 /* NSObject+MJKeyValue.m */; };
 		BD581A2D1E03C27600B91776 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = BD581A221E03C27600B91776 /* NSObject+MJProperty.m */; };
 		BD581A2E1E03C27600B91776 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BD581A241E03C27600B91776 /* NSString+MJExtension.m */; };
+		BDF9B7B81E14E151005FD6B4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF9B7B71E14E151005FD6B4 /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +142,7 @@
 		BD581A221E03C27600B91776 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
 		BD581A231E03C27600B91776 /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
 		BD581A241E03C27600B91776 /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+		BDF9B7B71E14E151005FD6B4 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 				BD10C6591E02809000684E25 /* AppDelegate.m */,
 				BD5817D31E037F2E00B91776 /* ViewController.h */,
 				BD5817D41E037F2E00B91776 /* ViewController.m */,
+				BDF9B7B71E14E151005FD6B4 /* ViewController.xib */,
 				BD10C68B1E0284A200684E25 /* ShowViewController.h */,
 				BD10C68C1E0284A200684E25 /* ShowViewController.m */,
 				BD5817D61E037FF400B91776 /* ShowTableViewCell.h */,
@@ -463,6 +466,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDF9B7B81E14E151005FD6B4 /* ViewController.xib in Resources */,
 				BD5817DA1E037FFC00B91776 /* ShowTableViewCell.xib in Resources */,
 				BD10C6651E02809100684E25 /* LaunchScreen.storyboard in Resources */,
 				BD581A0A1E03844100B91776 /* IQKeyboardManager.bundle in Resources */,
