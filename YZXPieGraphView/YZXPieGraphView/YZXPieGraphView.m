@@ -90,7 +90,7 @@
         UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"请传入比例!" preferredStyle:UIAlertControllerStyleAlert];
         [alertC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
         [[[UIApplication sharedApplication].delegate window].rootViewController presentViewController:alertC animated:YES completion:nil];
-    }else if ((self.precentageArr.count != self.titleArr.count && self.titleArr)) {
+    }else if (self.titleArr.count != 0 && self.precentageArr.count != self.titleArr.count) {
         UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"初始化时传入的数组元素数量不一致!" preferredStyle:UIAlertControllerStyleAlert];
         [alertC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
         [[[UIApplication sharedApplication].delegate window].rootViewController presentViewController:alertC animated:YES completion:nil];
