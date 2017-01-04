@@ -60,7 +60,9 @@
         if (titleArr) {
             self.titleArr = titleArr;
         }
+        
         self.precentageArr = precentageArr;
+        
         //判断是否传入颜色
         if (colorArr) {
             self.colorsArr = colorArr;
@@ -113,7 +115,7 @@
         __weak typeof(self) weak_self = self;
         __block CGFloat circle_x = self.circleCenter.x != 0?self.circleCenter.x:self_center_x;
         __block CGFloat circle_y = self.circleCenter.y != 0?self.circleCenter.y:self_center_y;
-        
+        //承载注释的scrollView
         __block UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, (circle_x - self.radius) / 3.0 * 2, self_height)];
         if (!self.hideAnnotation) {
             [self addSubview:scrollView];
@@ -204,12 +206,6 @@
                     label.textColor = titleColor;
                     label.text = title;
                     [scrollView addSubview:label];
-                    
-//                    CGContextSetFillColorWithColor(context, weak_self.colorsArr[idx].CGColor);
-//                    CGContextAddRect(context, CGRectMake(5, 5 + (idx * (5 + titleSize.height)), titleSize.height, titleSize.height));
-//                    CGContextDrawPath(context, kCGPathFill);
-//                    
-//                    [title drawInRect:CGRectMake(10 + titleSize.height, 5 + (idx * (5 + titleSize.height)), titleSize.width, titleSize.height) withAttributes:@{NSFontAttributeName:font,NSForegroundColorAttributeName:titleColor}];
                 }
             }
         }];
